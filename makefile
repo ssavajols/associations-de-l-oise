@@ -2,11 +2,13 @@
 include .env
 export $(shell sed 's/=.*//' .env)
 
+pm2=npx pm2
+
 help:
 	@echo "need help ?"
 
 ls:
-	@npx pm2 ls
+	@${pm2} ls
 
 install: 
 	@cd ./tutorial-part-one && npm install
@@ -21,16 +23,16 @@ install:
 restart: stop start 
 
 start:
-	@npx pm2 start
+	@${pm2} start
 
 stop: 
-	@npx pm2 stop all
+	@${pm2} stop all
 
 kill: 
-	@npx pm2 kill
+	@${pm2} kill
 
 logs: 
-	@npx pm2 logs
+	@${pm2} logs
 	
 build:
 	@cd ./tutorial-part-one && npm run build
