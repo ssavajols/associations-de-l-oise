@@ -1,0 +1,29 @@
+{
+  "name": "associations-de-l-oise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssavajols/associations-de-l-oise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssavajols/associations-de-l-oise/issues"
+  },
+  "homepage": "https://github.com/ssavajols/associations-de-l-oise#readme",
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.5.0",
+    "eslint-plugin-react": "^7.11.1",
+    "gatsby-cli": "^1.1.58",
+    "prettier": "^1.14.2"
+  },
+  "dependencies": {
+    "pm2": "^3.0.4"
+  }
+}
