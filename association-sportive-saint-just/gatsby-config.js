@@ -1,4 +1,5 @@
 module.exports = {
+    pathPrefix: '/associations-de-l-oise',
     siteMetadata: {
         title: 'Gatsby Default Starter',
     },

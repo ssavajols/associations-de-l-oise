@@ -12,13 +12,9 @@ ls:
 
 install: 
 	@cd ./tutorial-part-one && npm install
-	@cd -
 	@cd ./tutorial-part-two && npm install
-	@cd -
 	@cd ./tutorial-part-three && npm install
-	@cd -
 	@cd ./association-sportive-saint-just && npm install
-	@cd -
 
 restart: stop start 
 
@@ -36,14 +32,13 @@ logs:
 	
 build:
 	@cd ./tutorial-part-one && npm run build
-	@cd -
 	@cd ./tutorial-part-two && npm run build
-	@cd -
 	@cd ./tutorial-part-three && npm run build
-	@cd -
 	@cd ./association-sportive-saint-just && npm run build
-	@cd -
 	
+deploy:
+	@cd ./association-sportive-saint-just && npm run build -- --prefix-paths && npx gh-pages -d public
+
 serve:
 	@cd ./tutorial-part-one && npm run serve -- --port ${APP_1_SERVE_PORT} &
 	@cd -
@@ -52,4 +47,3 @@ serve:
 	@cd ./tutorial-part-three && npm run serve -- --port ${APP_3_SERVE_PORT} &
 	@cd -
 	@cd ./association-sportive-saint-just && npm run serve -- --port ${APP_4_SERVE_PORT} &
-	@cd -
